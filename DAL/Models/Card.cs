@@ -9,8 +9,8 @@ namespace DAL.Models
     public class Card
     {
         public int CardId { get; set; }
-        public Person Person { get; set; }
-
-        public ICollection<Purse> Purses { get; set; }
+        public float Quota { get; set; }
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 }

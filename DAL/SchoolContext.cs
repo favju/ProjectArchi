@@ -10,13 +10,13 @@ namespace DAL
 {
     public class SchoolContext : DbContext
     {
+        public SchoolContext(DbContextOptions<SchoolContext> options) : base(options) { }
         public DbSet<Card> Cards { get; set; }
-        public DbSet<Person> Persons { get; set; }
-        public DbSet<Purse> Purses { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ProjectDemo");
+            //optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ProjectDemo");
         }
     }
 }
