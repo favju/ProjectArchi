@@ -9,10 +9,7 @@ namespace EFMain
     {
         static void Main(string[] args)
         {
-            using var context = new SchoolContext();
-
-            var exist = context.Database.EnsureCreated();
-            context.SaveChanges();
+            
         }
 
     }
